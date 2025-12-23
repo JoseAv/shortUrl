@@ -31,9 +31,13 @@ as $$
         if newUrl is null then
             raise exception 'URL no valida';
         end if;
+
+        update url
+            set last_view = now() where id = fn_id;
         return  newUrl;
     end;
     $$ language plpgsql;
 
-select fn_get_url(3);
+select fn_get_url(1);
 
+select * from url;
