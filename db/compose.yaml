@@ -1,0 +1,15 @@
+version: "1.1"
+
+services :
+  short_url:
+      image: postgres:18-alpine3.23
+      restart: always
+      shm_size: 128mb
+      environment:
+        - POSTGRES_USER=admin
+        - POSTGRES_PASSWORD=admin
+        - POSTGRES_DB=short_db
+      volumes:
+        - ./data:/var/lib/postgresql/18/docker
+      ports:
+        - "5432:5432"
