@@ -8,17 +8,21 @@ create table url(
 
 
 
-create or replace procedure p_create_url(p_url text,p_code varchar(255)default null)
+create or replace function fn_create_url(p_url text,p_code varchar(255)default null)
+    returns int
 as $$
+    declare
+        codeUrl int;
+
         begin
-                insert into url(url, code) VALUES (p_url,p_code);
+                insert into url(url, code) VALUES (p_url,p_code) returning id into codeUrl;
+
+                return codeUrl;
         end;
 
     $$ language plpgsql;
 
-call p_create_url('https://app.clockify.me/tracker');
 
-select * from url
 
 create or replace function fn_get_url(fn_id int)
     returns text
@@ -40,4 +44,5 @@ as $$
 
 select fn_get_url(1);
 
+select * from url;
 select * from url;
