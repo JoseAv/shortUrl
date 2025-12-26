@@ -2,7 +2,6 @@ import express from 'express'
 import type { Request, Response } from 'express'
 import { ComprobationUrl } from './schema/comprobateionSchema.js'
 import { shortUrl } from './repositories/shorUrl.js'
-import type { typeUrl } from './interfaces/schema.js'
 
 const app = express()
 const Port = 3000
