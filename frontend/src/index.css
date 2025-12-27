@@ -1,0 +1,94 @@
+:root {
+  --background-color: #021e38;
+  --titlePrincipal: #fff;
+  --titelSecundarie: #021e38;
+
+}
+
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p,
+small,
+span {
+  text-wrap: pretty;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw + 1rem, 4rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw + 0.5rem, 3rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 3vw + 0.5rem, 2rem);
+}
+
+p {
+  font-size: clamp(1rem, 2vw + 0.5rem, 1.25rem);
+}
+
+small {
+  font-size: clamp(0.875rem, 1.5vw + 0.25rem, 1rem);
+}
+
+
+#root,
+#__next {
+  isolation: isolate;
+}
